@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700' rel='stylesheet' type='text/css'>
+    <link href="../owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="../owl-carousel/owl.theme.css" rel="stylesheet">
+    <link href="../assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+  </head>
+	<body>
+
+		<style>
+			#containertooltip {display: block; width:90%; background-color: rgba(0,0,0,0.2); border-radius: 10px;margin:auto;}
+			#h1tooltip {font-family: 'Open Sans', 'Helvetica'; font-size: 32px; font-weight: 300; text-align:left;padding-top: 10px;margin-left: 5%;}
+			#svgiconmap {width:32px;}
+			#headertooltip {height:40px; background-image:url('http://subtlepatterns.com/patterns/zwartevilt.png'); border-radius:3px; z-index:0;}
+			#icontooltip {width:38px; height:38px; padding: 2px; float:center; margin:auto;}
+			#titletooltip {padding-top:4px;}
+      #descriptionimg {font-size: 16px; font-weight: 400; font-family: 'Open Sans', 'Helvetica'; color:#777;margin-left: 7%; padding-bottom: 50px;text-shadow:2px 2px 6px rgba(150, 150, 150, 1);}
+      a {text-decoration: none; color:#000;}
+      a:hover {font-weight: 600; text-shadow:2px 2px 6px rgba(150, 150, 150, 1);}
+		</style>
+
+		<div id="containertooltip">
+        <!--imagen carousel-->
+  			<div id="demo">
+          <div id="owl-demo" class="owl-carousel">
+              <div class="item"><img src="imagenes/anne (1).jpg" alt="01"></div>
+              <div class="item"><img src="imagenes/anne (2).jpg" alt="02"></div>
+              <div class="item"><img src="imagenes/anne (3).jpg" alt="03"></div>
+              <div class="item"><img src="imagenes/anne (4).jpg" alt="04"></div>
+              <div class="item"><img src="imagenes/anne (5).jpg" alt="05"></div>
+              <div class="item"><img src="imagenes/anne (6).jpg" alt="06"></div>
+              <div class="item"><img src="imagenes/anne (7).jpg" alt="07"></div>
+          </div>
+        </div>
+        <script src="../assets/js/jquery-1.9.1.min.js"></script> 
+        <script src="../owl-carousel/owl.carousel.js"></script>
+  			<script>   
+  				$(document).ready(function() {
+  					     
+  					$(".owl-demo").owlCarousel();
+  					    
+  						navigation : true, // Show next and prev buttons
+  						slideSpeed : 300,
+  						paginationSpeed : 400,
+  						singleItem:true
+  					});
+  				});
+  			</script>
+        <!-- Demo -->
+        <style>
+          #owl-demo .item img{
+            display: block;
+            width: 100%;
+            height: 40%;
+          }
+        </style>
+        <!--Función-->
+        <script>
+        $(document).ready(function() {
+          $("#owl-demo").owlCarousel({
+
+          slideSpeed : 300,
+          paginationSpeed : 400,
+          singleItem : true
+         });
+        });
+        </script>
+
+        <script src="../assets/js/bootstrap-collapse.js"></script>
+        <script src="../assets/js/bootstrap-transition.js"></script>
+        <script src="../assets/js/bootstrap-tab.js"></script>
+
+        <script src="../assets/js/google-code-prettify/prettify.js"></script>
+        <script src="../assets/js/application.js"></script>
+
+        <!-- Encabezado -->
+        <div id="headertooltip">
+          <div id="icontooltip">
+            <img id="svgiconmap" src="http://www.clker.com/cliparts/b/3/2/1/14000190441065044319blanco_vergel439.svg">
+          </div>
+        </div>
+        <!--Título-->
+        <div id="titletooltip">
+          <a href="http://www.vergel439.cl/mapa"><h1 id="h1tooltip">Vergel 439</h1></a>
+        </div>
+        <!--Image Caption-->
+        <div id="descriptionimg">Fotografías por Anne Hélène Bour, mayo 2014</div>
+		  </div>
+	</body>
+</html>
