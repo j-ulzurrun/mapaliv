@@ -7,15 +7,15 @@
 	<body>
 		<style>
 			#containertooltip {width:280px;}
-			#h1tooltip {font-family: 'Open Sans', 'Helvetica'; font-size: 16px; text-align:center; font-weight: 300;}
+			#h1tooltip {font-family: 'Open Sans', 'Helvetica'; font-size: 16px; text-align:center; font-weight: 300; max-width: 260px; margin:auto;}
 			#svgiconmap {width:24px;}
-			#headertooltip {height:28px; background-color:#777; border-radius:3px; z-index:0;}
+			#headertooltip {height:28px; background-color:#000; border-radius:3px; z-index:0;}
 			#icontooltip {width:26px; height:26px; padding: 2px; float:center; margin:auto;}
 			#titletooltip {padding-top:4px;padding-bottom: 10px;}
       #titletooltip p {text-align: center; font-family: 'Open Sans', 'Helvetica'; font-weight: 400; font-size: 10px; color:#888;}
       #direccion {text-align: center; font-family: 'Open Sans', 'Helvetica'; font-weight: 800; font-size: 8px; color:#888; line-height: 10px;}
       #situacion {background: url('http://subtlepatterns.com/patterns/rockywall.png'); background-opacity:0.1; border-radius: 3px; padding-top: 10px; padding-bottom: 10px;}
-      #situacion p {text-align: center; font-family: 'Open Sans', 'Helvetica'; font-weight: 300; font-size:10px; color:#777; margin:auto;}
+      #situacion p {text-align: center; font-family: 'Open Sans', 'Helvetica'; font-weight: 300; font-size:10px; color:#777; margin:auto;line-height: 16px;}
       #situacion p span {font-weight: 300; font-style: italic;color: #b81823;}
 		</style>
 
@@ -23,7 +23,7 @@
         <!-- Encabezado -->
   			<div id="headertooltip">
   				<div id="icontooltip">
-  					<img id="svgiconmap" src="http://www.clker.com/cliparts/d/6/a/b/1400018775706229889blanco_albergues.svg">
+  					<img id="svgiconmap" src="http://www.clker.com/cliparts/2/f/d/0/1401053852282475976blanco_ayuda-animal.svg">
   				</div>
   			</div>
         <!--Título-->
@@ -34,7 +34,8 @@
   			</div>
         <!--Descripción-->
         <div id="situacion">
-          <p>Albergue desde el <span>{{{inicio}}}</span> hasta el <span>{{{termino}}}</span>.</p>
+          <p>Ayuda a animales afectados por el incendio</p>
+          <p>desde el <span>13</span> al <span>{{{termino}}}</span>.</p>
         </div>
     </div>
 	</body>
