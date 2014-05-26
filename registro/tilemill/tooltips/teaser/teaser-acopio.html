@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <style>
+      #containertooltip {width:280px;}
+      #h1tooltip {font-family: 'Open Sans', 'Helvetica'; font-size: 16px; text-align:center; max-width: 220px; margin:auto;}
+      #svgiconmap {width:24px;}
+      #headertooltip {height:28px; background-color:#157c87; border-radius:3px; z-index:0;}
+      #icontooltip {width:26px; height:26px; padding: 2px; float:center; margin:auto;}
+      #titletooltip {padding-top:4px;}
+    </style>
+
+    <div id="containertooltip">
+        <!-- Encabezado -->
+        <div id="headertooltip">
+          <div id="icontooltip">
+            <img id="svgiconmap" src="http://www.clker.com/cliparts/d/1/5/5/1400018553528890240blanco_acopio.svg">
+          </div>
+        </div>
+        <!--Título-->
+        <div id="titletooltip">
+          <h1 id="h1tooltip">{{{name}}}</h1>
+        </div>
+    </div>
+  </body>
+</html>
+
+<!-- STYLE.MSS TILEMILL
+#acopio {
+  marker-width:16px;
+  marker-file: url('d://encargos/cuarto/mapa/mapa01/svg/nuevos-markers/acopio.svg');
+  marker-placement: interior;
+  marker-allow-overlap:true;
+}
+-->
