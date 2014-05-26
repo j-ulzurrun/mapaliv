@@ -5,7 +5,7 @@
 <title></title>
   <script src='http://api.tiles.mapbox.com/mapbox.js/v1.6.0/mapbox.js'></script>
   <link href='http://api.tiles.mapbox.com/mapbox.js/v1.6.0/mapbox.css' rel='stylesheet' />
-  
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300,700,800' rel='stylesheet' type='text/css'>
   <style>
     body { margin:0; padding:0; }
     #map { position:absolute; top:0; bottom:0; width:100%; }
@@ -79,27 +79,25 @@ var map = L.mapbox.map('map', 'karol-barrera.iaj4mlfp',{scrollWheelZoom: false})
 map.scrollWheelZoom.disable();
 var ui = document.getElementById('map-ui');
 
-var vergel439 = L.mapbox.tileLayer('cindysanhueza.x5j2hvsr');
-var albergues = L.mapbox.tileLayer('cindysanhueza.yzs7oukh');
-var acopio = L.mapbox.tileLayer('cindysanhueza.nfngxo1c');
-var catastro = L.mapbox.tileLayer('cindysanhueza.xl16c1ti');
-var juntas = L.mapbox.tileLayer('cindysanhueza.zwgi4bji');
-var cuadrillas = L.mapbox.tileLayer('cindysanhueza.0onyss2k');
-var salud = L.mapbox.tileLayer('cindysanhueza.sxft76tq');
-var animales = L.mapbox.tileLayer('cindysanhueza.51suxixd');
-var transporte = L.mapbox.tileLayer('cindysanhueza.e4ke2xwk');
-var zafectada = L.mapbox.tileLayer('karol-barrera.aqjjf53n');
+var vergel439 = L.mapbox.tileLayer('karol-barrera.ttdzehfr');
+var albergues = L.mapbox.tileLayer('karol-barrera.y8z4obt9');
+var acopio = L.mapbox.tileLayer('karol-barrera.jtaqncdi');
+var catastro = L.mapbox.tileLayer('karol-barrera.r4jqncdi');
+var juntas = L.mapbox.tileLayer('karol-barrera.nns9vn29');
+var cuadrillas = L.mapbox.tileLayer('karol-barrera.f79icnmi');
+var animales = L.mapbox.tileLayer('karol-barrera.83j1c3di');
+var transporte = L.mapbox.tileLayer('karol-barrera.h5omvx6r');
+var zafectada = L.mapbox.tileLayer('karol-barrera.fu9grpb9');
 
-addLayer(vergel439, L.mapbox.gridLayer('cindysanhueza.x5j2hvsr'),'VERGEL 439', 10);
-addLayer(zafectada, L.mapbox.gridLayer('karol-barrera.aqjjf53n'),'ZONA AFECTADA', 1);
-addLayer(albergues, L.mapbox.gridLayer('cindysanhueza.yzs7oukh'),'ALBERGUES', 4);
-addLayer(acopio, L.mapbox.gridLayer('cindysanhueza.nfngxo1c'),'CENTROS ACOPIO', 2);
-addLayer(catastro, L.mapbox.gridLayer('cindysanhueza.xl16c1ti'),'CATASTRO Y DOCUMENTOS', 5);
-addLayer(juntas, L.mapbox.gridLayer('cindysanhueza.zwgi4bji'),'JUNTAS VECINALES', 6);
-addLayer(cuadrillas, L.mapbox.gridLayer('cindysanhueza.0onyss2k'),'CUADRILLAS', 8);
-addLayer(salud, L.mapbox.gridLayer('cindysanhueza.sxft76tq'),'CENTROS MÉDICOS', 3);
-addLayer(animales, L.mapbox.gridLayer('cindysanhueza.51suxixd'),'AYUDA ANIMAL', 6);
-addLayer(transporte, L.mapbox.gridLayer('cindysanhueza.e4ke2xwk'),'TRANSPORTE', 9);
+addLayer(vergel439, L.mapbox.gridLayer('karol-barrera.ttdzehfr'),'VERGEL 439', 9);
+addLayer(zafectada, L.mapbox.gridLayer('karol-barrera.fu9grpb9'),'ZONA AFECTADA', 1);
+addLayer(albergues, L.mapbox.gridLayer('karol-barrera.y8z4obt9'),'ALBERGUES', 3);
+addLayer(acopio, L.mapbox.gridLayer('karol-barrera.jtaqncdi'),'CENTROS ACOPIO', 2);
+addLayer(catastro, L.mapbox.gridLayer('karol-barrera.r4jqncdi'),'CATASTRO Y DOCUMENTOS', 4);
+addLayer(juntas, L.mapbox.gridLayer('karol-barrera.nns9vn29'),'JUNTAS VECINALES', 5);
+addLayer(cuadrillas, L.mapbox.gridLayer('karol-barrera.f79icnmi'),'CUADRILLAS', 7);
+addLayer(animales, L.mapbox.gridLayer('karol-barrera.83j1c3di'),'AYUDA ANIMAL', 6);
+addLayer(transporte, L.mapbox.gridLayer('karol-barrera.h5omvx6r'),'TRANSPORTE', 8);
 
 function addLayer(layer, gridlayer, name, zIndex) {
     layer
@@ -138,9 +136,3 @@ function addLayer(layer, gridlayer, name, zIndex) {
 </script>
 </body>
 </html>
-
-<!-- mapbox online mapliv1.0
-
-<iframe src="http://a.tiles.mapbox.com/v3/j-ulzurrun.i5j303nf/attribution,zoompan,geocoder,share.html" width="100%" height="630px" frameborder="0"></iframe>
--->
-
