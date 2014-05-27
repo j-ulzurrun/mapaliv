@@ -79,25 +79,25 @@ var map = L.mapbox.map('map', 'karol-barrera.iaj4mlfp',{scrollWheelZoom: false})
 map.scrollWheelZoom.disable();
 var ui = document.getElementById('map-ui');
 
-var vergel439 = L.mapbox.tileLayer('karol-barrera.ttdzehfr');
-var albergues = L.mapbox.tileLayer('karol-barrera.y8z4obt9');
-var acopio = L.mapbox.tileLayer('karol-barrera.jtaqncdi');
-var catastro = L.mapbox.tileLayer('karol-barrera.r4jqncdi');
-var juntas = L.mapbox.tileLayer('karol-barrera.nns9vn29');
-var cuadrillas = L.mapbox.tileLayer('karol-barrera.f79icnmi');
-var animales = L.mapbox.tileLayer('karol-barrera.83j1c3di');
-var transporte = L.mapbox.tileLayer('karol-barrera.h5omvx6r');
-var zafectada = L.mapbox.tileLayer('karol-barrera.fu9grpb9');
+var vergel439 = L.mapbox.tileLayer('karol-barrera.o3x72e29');
+var albergues = L.mapbox.tileLayer('karol-barrera.hzbsm7vi');
+var acopio = L.mapbox.tileLayer('karol-barrera.plbd42t9');
+var catastro = L.mapbox.tileLayer('karol-barrera.xj13jtt9');
+var juntas = L.mapbox.tileLayer('karol-barrera.ny6qolxr');
+var cuadrillas = L.mapbox.tileLayer('karol-barrera.lx979zfr');
+var animales = L.mapbox.tileLayer('karol-barrera.4251m7vi');
+var transporte = L.mapbox.tileLayer('karol-barrera.5301wcdi');
+var zafectada = L.mapbox.tileLayer('karol-barrera.7kx4j9k9');
 
-addLayer(vergel439, L.mapbox.gridLayer('karol-barrera.ttdzehfr'),'VERGEL 439', 9);
-addLayer(zafectada, L.mapbox.gridLayer('karol-barrera.fu9grpb9'),'ZONA AFECTADA', 1);
-addLayer(albergues, L.mapbox.gridLayer('karol-barrera.y8z4obt9'),'ALBERGUES', 3);
+addLayer(vergel439, L.mapbox.gridLayer('karol-barrera.o3x72e29'),'VERGEL 439', 9);
+addLayer(zafectada, L.mapbox.gridLayer('karol-barrera.7kx4j9k9'),'ZONA AFECTADA', 1);
+addLayer(albergues, L.mapbox.gridLayer('karol-barrera.plbd42t9'),'ALBERGUES', 3);
 addLayer(acopio, L.mapbox.gridLayer('karol-barrera.jtaqncdi'),'CENTROS ACOPIO', 2);
-addLayer(catastro, L.mapbox.gridLayer('karol-barrera.r4jqncdi'),'CATASTRO Y DOCUMENTOS', 4);
-addLayer(juntas, L.mapbox.gridLayer('karol-barrera.nns9vn29'),'JUNTAS VECINALES', 5);
-addLayer(cuadrillas, L.mapbox.gridLayer('karol-barrera.f79icnmi'),'CUADRILLAS', 7);
-addLayer(animales, L.mapbox.gridLayer('karol-barrera.83j1c3di'),'AYUDA ANIMAL', 6);
-addLayer(transporte, L.mapbox.gridLayer('karol-barrera.h5omvx6r'),'TRANSPORTE', 8);
+addLayer(catastro, L.mapbox.gridLayer('karol-barrera.xj13jtt9'),'CATASTRO Y DOCUMENTOS', 4);
+addLayer(juntas, L.mapbox.gridLayer('karol-barrera.ny6qolxr'),'JUNTAS VECINALES', 5);
+addLayer(cuadrillas, L.mapbox.gridLayer('karol-barrera.lx979zfr'),'CUADRILLAS', 7);
+addLayer(animales, L.mapbox.gridLayer('karol-barrera.4251m7vi'),'AYUDA ANIMAL', 6);
+addLayer(transporte, L.mapbox.gridLayer('karol-barrera.5301wcdi'),'TRANSPORTE', 8);
 
 function addLayer(layer, gridlayer, name, zIndex) {
     layer
