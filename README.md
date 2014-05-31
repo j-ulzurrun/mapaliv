@@ -1,1 +1,1 @@
-Creación de mapas para el sitio [[http://www.vergel439.cl Vergel439]]
+Creación de mapas para el sitio <a href="http://www.vergel439.cl">Vergel 439</a>
