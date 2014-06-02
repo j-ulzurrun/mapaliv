@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+	<style>
+		#containertooltip {width:280px;padding-bottom: 2px;}
+
+		#encabezadoicono {height:28px;  background-color:rgba(157, 31, 40, 0.8); border-radius:3px; z-index:0;}
+
+		#iconfuego {width:26px; height:26px; padding: 2px; float:center; margin:auto;}
+			#iconfuego img {width:24px; z-index:1;}
+
+		#datos {padding-bottom: 10px;}
+
+		#nombre {font-family: 'Open Sans', 'Helvetica'; font-size: 14px; 
+			text-align:center; font-weight: 300; padding-top:20px; line-height: 17px;}
+
+		#comuna {font-family: 'Open Sans', 'Helvetica'; font-size: 12px; 
+			text-align:center; font-weight: 300; padding-top:10px; line-height: 16px;}
+
+		#utm {text-align: center; font-family: 'Open Sans', 'Helvetica'; font-weight: 300; font-size:9px; color:#777; font-style: italic; margin:auto; line-height: 14px;}
+			#utm span {color: #b81823;}
+
+		#variable {background: url('http://subtlepatterns.com/patterns/rockywall.png'); border-radius:3px; width:278px; padding-bottom: 3px;}
+
+		#campo {width: 278px; margin-bottom: 2px; margin-top: 2px; max-height: 12px;}
+			#campo p {font-family: 'Open Sans', 'Helvetica'; font-size: 10px; text-align:left; font-weight: 300; color:#888; padding-left:8px;}
+
+		#contenido {width:278px; max-height: 20px;}
+			#contenido p {font-family: 'Open Sans', 'Helvetica'; font-size: 14px; text-align:right; font-weight: 800; color:#888; padding-right:8px; padding-bottom: 2px;}
+		
+	</style>
+
+	<div id="containertooltip">
+		<div id="encabezadoicono">
+			<div id="iconfuego">
+				<img src="http://www.clker.com/cliparts/e/4/9/d/1400551306335914293blanco_incendio.svg"></img>
+			</div>
+		</div>
+		 
+		<div id="datos">
+			<p id="nombre"> {{{NOMBRE}}} </p>
+			<p id="comuna">{{{COMUNA}}} </p>
+			<p id="utm">Utm(x,y) = ( <span>{{{utm_x}}}</span> , <span>{{{utm_y}}}</span> )</p>
+		</div>
+	</body>
+</html>
