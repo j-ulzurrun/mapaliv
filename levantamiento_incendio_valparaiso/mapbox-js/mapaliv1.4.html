@@ -57,19 +57,61 @@ map.addControl(L.mapbox.gridControl(transporteGridLayer,{follow: false}));
 
 
 var overlays = {
-  "Albergues":albergues,
-  "Centros de acopio":acopio,
-  "Castastro y documentos":catastro,
-  "Juntas Vecinales":juntas,
-  "Cuadrillas":cuadrillas,
-  "Ayuda Animal":animales,
-  "Transporte":transporte,
+  "ALBERGUES":albergues,
+  "CENTROS DE ACOPIO":acopio,
+  "CATASTRO Y DOCUMENTOS":catastro,
+  "JUNTAS VECINALES":juntas,
+  "CUADRILLAS":cuadrillas,
+  "AYUDA ANIMAL":animales,
+  "TRANSPORTE":transporte,
 };
 
 // add the layer control
 L.control.layers(null, overlays,{position:'topleft'}).addTo(map);
 L.control.fullscreen().addTo(map);
-
 </script>
+<style>
+            #leyend {width:500px; background: url('http://subtlepatterns.com/patterns/rockywall.png');padding-bottom: 5px; position: fixed; bottom: 5px; left: 10px; border: 7px solid white; border-radius: 3px;}
+
+            #titleleyend {padding-top: 5px; height: 45px;line-height: 0;}
+                #titleleyend p {font-family: 'Open Sans', 'Helvetica'; font-size: 18px; text-align:center; font-weight: 300; line-height: 0px; color:#000;}
+                #titleleyend span {font-family: 'Open Sans', 'Helvetica'; font-size: 10px; font-weight: 300; color:#b81823; font-style: italic; line-height: 0px;padding-left: 20%;}
+
+            #textleyend {padding-top: 2px;}
+                #textleyend p{font-family: 'Open Sans', 'Helvetica'; font-size: 12px; text-align:center; font-weight: 300; color:#888;}
+                    #textleyend p a{color:#b81823;text-decoration: none;}
+                    #textleyend p a:hover {color:#b81823;text-decoration: none;font-weight: 400;}
+
+            #leyendicons {width: 460px; padding-bottom: 7px; height: 30px;display:flex; margin: auto;}
+                #icon01 {padding-bottom: 10px;padding-left: 8.7px;padding-right: 8.7px; height:40px;padding-top: 3px;}
+                    #icon01 img {width: 32px;height: 32px;}
+
+                #icon02 {padding-right: 8.7px;padding-left: 8.7px;height: 40px;}
+                    #icon02 img {width: 40px;height: 40px;}
+        </style>
+
+        <div id="leyend">        
+            <div id="titleleyend"> 
+                <p>LEVANTAMIENTO INCENDIO VALPARAÍSO</p>
+                <span>Para navegar activa las capas y para mayor información haz click sobre los puntos.</span>
+            </div>
+            <div id="textleyend">
+                <p> Estos puntos indican las organizaciones e instituciones públicas y privadas que prestaron su ayuda a través de espacios y servicios a las familias damnificadas por el incendio.</p>
+                <p>Mapa originalmente utilizado para la organización de los voluntarios, disponible <a href="https://mapsengine.google.com/map/viewer?mid=ziREm-PuNRQs.kBQngf0Lawps">aquí</a>.</p>
+            </div>
+            <!--
+            <div id="leyendicons">
+                <div id="icon01"><img src="http://www.clker.com/cliparts/d/6/a/b/1400018775706229889blanco_albergues.svg"></div>
+                <div id="icon01"><img src="http://www.clker.com/cliparts/d/1/5/5/1400018553528890240blanco_acopio.svg"></div>
+                <div id="icon01"><img src="http://www.clker.com/cliparts/1/2/8/c/14000188641136499348blanco_catastro.svg"></div>
+                <div id="icon01"><img src="http://www.clker.com/cliparts/a/e/6/e/14000166422037961888blanco_junta-vecinal.svg"></div>
+                <div id="icon02"><img src="http://www.clker.com/cliparts/b/3/2/1/14000190441065044319blanco_vergel439.svg"></div>
+                <div id="icon01"><img src="http://www.clker.com/cliparts/4/8/4/f/14010540781554974055blanco_cuadrilla.svg"></div>
+                <div id="icon01"><img src="http://www.clker.com/cliparts/3/e/4/e/14000189121371356049blanco_centro-salud.svg"></div>
+                <div id="icon01"><img src="http://www.clker.com/cliparts/2/f/d/0/1401053852282475976blanco_ayuda-animal.svg"></div>
+                <div id="icon01"><img src="http://www.clker.com/cliparts/b/b/4/1/14000189541426149205blanco_transporte.svg"></div>
+            </div>
+        </div>
+    -->
 </body>
 </html>
