@@ -152,6 +152,59 @@ function addLayer(layer, gridlayer, name, zIndex) {
    ui.appendChild(item);
 }
 </script>
+
+
+<style>
+
+        #divleyend { position:fixed; margin-right: 0px; padding-right: 0px;bottom:0; right:0;}
+
+        #leyend { width:280px; background: url('http://subtlepatterns.com/patterns/rockywall.png');padding-bottom: 10px;} 
+
+        #titleleyend {width: 500px; padding-top: 10px; height: 50px;line-height: 0;}
+            #titleleyend p {font-family: 'Open Sans', 'Helvetica'; font-size: 13px; text-align:left; font-weight: 300; line-height: 0px; padding-left:10px; color:#000;}
+           
+            #letrasrojas span {font-family: 'Open Sans', 'Helvetica'; font-size: 10px; text-align:left; font-weight: 300; padding-left:20px; color:#b81823; font-style: italic; line-height: 0px; position: fixed; `padding-top: 50px;}
+
+            #letrasrojas p {font-family: 'Open Sans', 'Helvetica'; font-size: 10px; text-align:left; font-weight: 300; padding-left:30px; color:#b81823; font-style: italic; line-height: 0px; position: fixed; padding-top:10px ;}
+
+            
+
+        #textleyend {width: 280px;padding-top: 0px;}
+            #textleyend p{font-family: 'Open Sans', 'Helvetica'; font-size: 10px; text-align:left; font-weight: 300; color:#888;padding-left:30px; padding-right: 10px;}
+            #textleyend p a{color:#b81823;text-decoration: none;}
+            #textleyend p a:hover {color:#b81823;text-decoration: none;font-weight: 400;}
+
+        #leyendicons {width: 280px; padding-bottom: 10px; height: 30px;display:flex; margin: auto;}
+           
+
+            #icon02 {padding-bottom: 10px;padding-right: 8.7px;padding-left: 120px;height: 40px; margin: center;} 
+                #icon02 img {width: 40px;height: 40px; margin: center;}
+    </style>
+
+
+
+         <div id="divleyend"> 
+        <div id="leyend">        
+            <div id="titleleyend"> <p>Incendios históricos</p>    
+
+                
+            <div id="letrasrojas">
+               <span>Navega filtrando las capas y </span>
+                <p>para mayor información haz click sobre los puntos</p>
+                </div>
+            </div>
+            <div id="textleyend">
+                <p> Estos puntos indican los incendios registrados por CONAF ocurridos entre los años 1998 al 2010 en la Ciudad de Valparaíso, el tamaño señala la magnitud del incendio según el área afectada.</p>
+               
+            </div>
+            <div id="leyendicons"> 
+               <div id="icon02"><img src="http://www.clker.com/cliparts/e/4/9/d/1400551306335914293blanco_incendio.svg"></div>
+               
+            </div>
+        </div>
+        </div>
+
+
 </body>
 </html>
 
