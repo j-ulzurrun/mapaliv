@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title></title>
+  <script src='http://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
+  <link href='http://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css' rel='stylesheet' />
+  <!--[if lte IE 8]>
+    <link href='//api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.ie.css' rel='stylesheet'>
+  <![endif]-->
+  <style>
+    body { margin:0; padding:0; }
+    #map { position:absolute; top:0; bottom:0; width:100%; }
+  </style>
+</head>
+<body>
+<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.2/Leaflet.fullscreen.min.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.2/leaflet.fullscreen.css' rel='stylesheet' />
+<div id='map'></div>
+<script type='text/javascript'>
+
+var albergues = new L.LayerGroup(),
+    acopio = new L.LayerGroup(),
+    catastro = new L.LayerGroup(),
+    juntas = new L.LayerGroup(),
+    cuadrillas = new L.LayerGroup(),
+    animales = new L.LayerGroup(),
+    transporte = new L.LayerGroup();
+   
+var alberguesLayer = L.mapbox.tileLayer('karol-barrera.hzbsm7vi').addTo(albergues),
+    acopioLayer = L.mapbox.tileLayer('karol-barrera.plbd42t9').addTo(acopio),
+    catastroLayer = L.mapbox.tileLayer('karol-barrera.xj13jtt9').addTo(catastro),
+    juntasLayer = L.mapbox.tileLayer('karol-barrera.ny6qolxr').addTo(juntas),
+    cuadrillasLayer = L.mapbox.tileLayer('karol-barrera.lx979zfr').addTo(cuadrillas),
+    animalesLayer = L.mapbox.tileLayer('karol-barrera.4251m7vi').addTo(animales),
+    transporteLayer = L.mapbox.tileLayer('karol-barrera.5301wcdi').addTo(transporte);
+  
+var map = L.mapbox.map('map', 'karol-barrera.idhehf88').setView([-33.062, -71.617], 13);
+
+var alberguesGridLayer = L.mapbox.gridLayer('karol-barrera.hzbsm7vi').addTo(albergues),
+    acopioGridLayer = L.mapbox.gridLayer('karol-barrera.plbd42t9').addTo(acopio),
+    catastroGridLayer = L.mapbox.gridLayer('karol-barrera.xj13jtt9').addTo(catastro),
+    juntasGridLayer = L.mapbox.gridLayer('karol-barrera.ny6qolxr').addTo(juntas),
+    cuadrillasGridLayer = L.mapbox.gridLayer('karol-barrera.lx979zfr').addTo(cuadrillas),
+    animalesGridLayer = L.mapbox.gridLayer('karol-barrera.4251m7vi').addTo(animales),
+    transporteGridLayer = L.mapbox.gridLayer('karol-barrera.5301wcdi').addTo(transporte);
+
+
+// add the gridControl for the gridLayers
+map.addControl(L.mapbox.gridControl(alberguesGridLayer,{follow: false})),
+map.addControl(L.mapbox.gridControl(acopioGridLayer,{follow: false})),
+map.addControl(L.mapbox.gridControl(catastroGridLayer,{follow: false})),
+map.addControl(L.mapbox.gridControl(juntasGridLayer,{follow: false})),
+map.addControl(L.mapbox.gridControl(cuadrillasGridLayer,{follow: false})),
+map.addControl(L.mapbox.gridControl(animalesGridLayer,{follow: false})),
+map.addControl(L.mapbox.gridControl(transporteGridLayer,{follow: false}));
+
+
+var overlays = {
+  "Albergues":albergues,
+  "Centros de acopio":acopio,
+  "Castastro y documentos":catastro,
+  "Juntas Vecinales":juntas,
+  "Cuadrillas":cuadrillas,
+  "Ayuda Animal":animales,
+  "Transporte":transporte,
+};
+
+// add the layer control
+L.control.layers(null, overlays,{position:'topleft'}).addTo(map);
+L.control.fullscreen().addTo(map);
+
+</script>
+</body>
+</html>
