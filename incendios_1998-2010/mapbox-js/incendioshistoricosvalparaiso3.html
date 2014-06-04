@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title></title>
+  <script src='http://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
+  <link href='http://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css' rel='stylesheet' />
+  <!--[if lte IE 8]>
+<link href='//api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.ie.css' rel='stylesheet'>
+<![endif]-->
+  <style>
+    body { margin:0; padding:0; }
+    #map { position:absolute; top:0; bottom:0; width:100%; }
+  </style>
+</head>
+<body>
+<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.2/Leaflet.fullscreen.min.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.2/leaflet.fullscreen.css' rel='stylesheet' />
+<div id='map'></div>
+<script type='text/javascript'>
+
+var uno = new L.LayerGroup(),
+    dos = new L.LayerGroup(),
+    tres = new L.LayerGroup(),
+    cuatro = new L.LayerGroup(),
+    cinco = new L.LayerGroup(),
+    seis = new L.LayerGroup(),
+    siete = new L.LayerGroup();
+    ocho = new L.LayerGroup(),
+    nueve = new L.LayerGroup(),
+    diez = new L.LayerGroup(),
+    once = new L.LayerGroup(),
+    doce = new L.LayerGroup();
+    trece = new L.LayerGroup();
+   
+var unoLayer = L.mapbox.tileLayer('cindysc.arqe7kb7').addTo(uno),
+    dosLayer = L.mapbox.tileLayer('cindysc.p3yhlthd').addTo(dos),
+    tresLayer = L.mapbox.tileLayer('cindysc.plisedbs').addTo(tres),
+    cuatroLayer = L.mapbox.tileLayer('cindysc.x4lwc4p5').addTo(cuatro),
+    cincoLayer = L.mapbox.tileLayer('cindysc.aao0v8kd').addTo(cinco),
+    seisLayer = L.mapbox.tileLayer('cindysc.gj6x8b5f').addTo(seis),
+    sieteLayer = L.mapbox.tileLayer('cindysc.bhy0whxl').addTo(siete),
+    ochoLayer = L.mapbox.tileLayer('cindysc.i112yu42').addTo(ocho),
+    nueveLayer = L.mapbox.tileLayer('cindysc.b57gd4dl').addTo(nueve),
+    diezLayer = L.mapbox.tileLayer('cindysc.okjua2qx').addTo(diez),
+    onceLayer = L.mapbox.tileLayer('cindysc.prm2evzm').addTo(once),
+    doceLayer = L.mapbox.tileLayer('cindysc.ywwv7vbe').addTo(doce),
+    treceLayer = L.mapbox.tileLayer('cindysc.x4q9imao').addTo(trece);
+
+
+var map = L.mapbox.map('map', 'cindysanhueza.i87l51f6').setView([-33.064, -71.618], 13);   
+
+var unoGridLayer = L.mapbox.gridLayer('cindysc.arqe7kb7').addTo(uno),
+    dosGridLayer = L.mapbox.gridLayer('cindysc.p3yhlthd').addTo(dos),
+    tresGridLayer = L.mapbox.gridLayer('cindysc.plisedbs').addTo(tres),
+    cuatroGridLayer = L.mapbox.gridLayer('cindysc.x4lwc4p5').addTo(cuatro),
+    cincoGridLayer =  L.mapbox.gridLayer('cindysc.aao0v8kd').addTo(cinco),
+    seisGridLayer = L.mapbox.gridLayer('cindysc.gj6x8b5f').addTo(seis),
+    sieteGridLayer = L.mapbox.gridLayer('cindysc.bhy0whxl').addTo(siete),
+    ochoGridLayer = L.mapbox.gridLayer('cindysc.i112yu42').addTo(ocho),
+    nueveGridLayer = L.mapbox.gridLayer('cindysc.b57gd4dl').addTo(nueve),
+    diezGridLayer = L.mapbox.gridLayer('cindysc.okjua2qx').addTo(diez),
+    onceGridLayer = L.mapbox.gridLayer('cindysc.prm2evzm').addTo(once),
+    doceGridLayer = L.mapbox.gridLayer('cindysc.ywwv7vbe').addTo(doce),
+    treceGridLayer = L.mapbox.gridLayer('cindysc.x4q9imao').addTo(trece);
+
+
+// add the gridControl for the gridLayers
+map.addControl(L.mapbox.gridControl(unoGridLayer,{follow: false})),
+map.addControl(L.mapbox.gridControl(dosGridLayer,{follow: false})),
+map.addControl(L.mapbox.gridControl(tresGridLayer,{follow: false})),
+map.addControl(L.mapbox.gridControl(cuatroGridLayer,{follow: false})),
+map.addControl(L.mapbox.gridControl(cincoGridLayer,{follow: false})),
+map.addControl(L.mapbox.gridControl(seisGridLayer,{follow: false})),
+map.addControl(L.mapbox.gridControl(sieteGridLayer,{follow: false})),
+map.addControl(L.mapbox.gridControl(ochoGridLayer,{follow: false})),
+map.addControl(L.mapbox.gridControl(nueveGridLayer,{follow: false})),
+map.addControl(L.mapbox.gridControl(diezGridLayer,{follow: false})),
+map.addControl(L.mapbox.gridControl(onceGridLayer,{follow: false})),
+map.addControl(L.mapbox.gridControl(doceGridLayer,{follow: false})),
+map.addControl(L.mapbox.gridControl(treceGridLayer,{follow: false}));
+
+
+var overlays = {
+  "1998":uno,
+  "1999":dos,
+  "2000":tres,
+  "2001":cuatro,
+  "2002":cinco,
+  "2003":seis,
+  "2004":siete,
+  "2005":ocho,
+  "2006":nueve,
+  "2007":diez,
+  "2008":once,
+  "2009":doce,
+  "2010":trece,
+};
+
+// add the layer control
+L.control.layers(null, overlays,{position:'topleft'}).addTo(map);
+L.control.fullscreen().addTo(map);
+</script>
+
+<style>
+            #leyend {width:500px; background: url('http://subtlepatterns.com/patterns/rockywall.png');padding-bottom: 5px; position: fixed; bottom: 5px; left: 10px; border: 7px solid white; border-radius: 3px;}
+
+            #titleleyend {padding-top: 5px; height: 45px;line-height: 0;}
+                #titleleyend p {font-family: 'Open Sans', 'Helvetica'; font-size: 18px; text-align:center; font-weight: 300; line-height: 0px; color:#000;}
+                #titleleyend span {font-family: 'Open Sans', 'Helvetica'; font-size: 10px; font-weight: 300; color:#b81823; font-style: italic; line-height: 0px;padding-left: 20%;}
+
+            #textleyend {padding-top: 2px;}
+                #textleyend p{font-family: 'Open Sans', 'Helvetica'; font-size: 12px; text-align:center; font-weight: 300; color:#888;}
+                    #textleyend p a{color:#b81823;text-decoration: none;}
+                    #textleyend p a:hover {color:#b81823;text-decoration: none;font-weight: 400;}
+
+            #leyendicons {width: 460px; padding-bottom: 7px; height: 30px;display:flex; margin: auto;}
+                #icon01 {padding-bottom: 10px;padding-left: 8.7px;padding-right: 8.7px; height:40px;padding-top: 3px;}
+                    #icon01 img {width: 32px;height: 32px;}
+
+                #icon02 {padding-right: 8.7px;padding-left: 8.7px;height: 40px;}
+                    #icon02 img {width: 40px;height: 40px;}
+        </style>
+
+        <div id="leyend">
+            <div id="titleleyend">
+                <p>INCENDIOS EN VALPARAÍSO 1998-2010</p>
+                <span>Para navegar activa las capas y para mayor información haz click sobre los puntos.</span>
+            </div>
+            <div id="textleyend">
+                <p>Estos puntos indican los incendios registrados por CONAF entre los años 1998 al 2010 en la ciudad de Valparaíso, además de información específica sobre cada uno de ellos.</p>
+
+                <p>El tamaño del punto señala la magnitud del incendio en relación al área afectada.</p>
+                
+            </div>
+           
+</body>
+
+</html>
